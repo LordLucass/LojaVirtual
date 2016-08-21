@@ -1,0 +1,21 @@
+﻿         
+<div class="jumbotron">
+    <h1>Queima de estoque</h1>
+    <p>Monitores com 20% de desconto no cartão de crédito em 50 vezes sem juros</p>
+</div>
+<!--Mostra a lista de produtos-->
+<div class="row">
+    <!-- produtos aqui -->
+    @foreach (var produto in ViewBag.Produtos)
+    {
+        <div class="col-md-4">
+            <h2>@produto.Nome</h2>
+            <p>@produto.Descricao</p>
+            <p>@produto.Preco</p>
+        </div>
+    }
+
+</div>
+
+
+              

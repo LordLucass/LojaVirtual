@@ -1,0 +1,39 @@
+﻿
+<html>
+<head>
+    <!-- Importamos o css aqui -->
+    
+    <link href="~/Content/Css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Css/Style.css" rel="stylesheet" />
+    
+</head>
+<body>
+
+    <!--Links da página-->
+    @Html.Partial("_MenuSuperior")
+
+    <!-- conteúdo da página e o menu lateral-->
+    <div class="container-fluid">
+       
+         <!--organiza o conteudo da pagina-->
+        <div class="row">
+           
+             <!--utiliza 3 de 12 colunas para o menu-->
+            <div class="col-md-3">
+                @Html.Action("Index", "Menu")
+            </div>
+           
+             <!--utiliza 9 de 12 colunas para o conteudo principal-->
+            <div class="col-md-9">
+                @RenderBody()
+
+            </div>
+
+        </div>
+
+    </div>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>
+

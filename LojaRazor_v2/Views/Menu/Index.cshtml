@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+<!--defini um menu lateral e fundo em destaque-->
+<div class="sidebar-nav well">
+    <ul class="nav list-group">
+        @foreach (var departamento in ViewBag.Departamentos)
+        {
+            @* coloca o nome do departamento em destaque *@
+            <li class="nav-header text-primary">@departamento.Nome</li>
+            foreach (var categoria in departamento.Categorias)
+            {
+                <li>@categoria.Nome</li>
+            }
+        }
+    </ul>
+</div>
+
